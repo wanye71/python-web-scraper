@@ -1,4 +1,4 @@
-# Scrapy settings for article_scraper project
+# Scrapy settings for news_scraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,19 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "article_scraper"
+BOT_NAME = "news_scraper"
 
-CLOSESPIDER_PAGECOUNT=10
-
-FEED_URI= 'article.xml'
-FEED_FORMAT= 'xml'
-
-SPIDER_MODULES = ["article_scraper.spiders"]
-NEWSPIDER_MODULE = "article_scraper.spiders"
+SPIDER_MODULES = ["news_scraper.spiders"]
+NEWSPIDER_MODULE = "news_scraper.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "article_scraper (+http://www.yourdomain.com)"
+#USER_AGENT = "news_scraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -50,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "article_scraper.middlewares.ArticleScraperSpiderMiddleware": 543,
+#    "news_scraper.middlewares.NewsScraperSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "article_scraper.middlewares.ArticleScraperDownloaderMiddleware": 543,
+#    "news_scraper.middlewares.NewsScraperDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -67,11 +62,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'article_scraper.pipelines.CheckItemPipeline': 100,
-    'article_scraper.pipelines.CleanDatePipeline': 200,
-
-}
+#ITEM_PIPELINES = {
+#    "news_scraper.pipelines.NewsScraperPipeline": 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
