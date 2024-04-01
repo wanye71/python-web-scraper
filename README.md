@@ -3,6 +3,9 @@
 ## Start a new scraping project
 *scrapy startproject news_scraper*
 
+## Generate spider file
+*scrapy genspider news foxnews.com*
+
 ## Command for crawling and saving results to file
 - scrapy runspider wikipedia.py -o article.xml -t xml -s CLOSESPIDER_PAGECOUNT=10
 - scrapy runspider wikipedia.py -o article.xml -t xml
