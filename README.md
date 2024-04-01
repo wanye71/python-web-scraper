@@ -7,7 +7,9 @@
 - scrapy runspider wikipedia.py
 > Also in the .py file you can customize the save output settings using
 >
-> `custom_settings={
+> ```
+custom_settings={
     FEED_URI="article.csv",
     FEED_FORMAT="csv"
-}`
+}
+```
