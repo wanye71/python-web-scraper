@@ -10,7 +10,7 @@ Also in the .py file you can customize the save output settings using
 
 ```json
 
-{
+custom_settings = {
     FEED_URI="article.csv",
     FEED_FORMAT="csv"
 }
