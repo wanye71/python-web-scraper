@@ -13,7 +13,7 @@ class WikipediaSpider(CrawlSpider):
         ]
     def parse_info(self, response):
         article = Article()
-        article["title"] = response.xpath('//h1/text()').get() or response.xpath('//h1/i/text()').get()
+        article["title"] = response.xpath('//span[@class="mw-page-title-main"]/text()').get()
         article["url"] = response.url
         article['lastUpdated'] = response.xpath('//li[@id="footer-info-lastmod"]/text()').get()
         return article
